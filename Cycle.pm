@@ -1,10 +1,10 @@
-# $Id: Cycle.pm,v 1.11 2005/01/04 00:47:00 comdog Exp $
+# $Id: Cycle.pm,v 1.12 2005/03/08 22:29:30 comdog Exp $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.11 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.12 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -113,7 +113,7 @@ example of this effect.
 =head1 OBJECT METHODS
 
 You can call methods on the underlying object (which you access
-with tied().).
+with tied() ).
 
 =over 4
 
