@@ -4,7 +4,7 @@ require 5.6.0;
 use strict;
 use warnings;
 
-our $VERSION = 0.01;
+our $VERSION = 0.02;
 
 sub TIESCALAR
 	{
@@ -82,7 +82,7 @@ example of this effect.
 
 =head1 AUTHOR
 
-brian d foy <brian+cpan@smithrenaud.com>.
+brian d foy <comdog@panix.com>.
 
 =head1 COPYRIGHT and LICENSE
 
