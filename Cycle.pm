@@ -1,10 +1,10 @@
-# $Id: Cycle.pm,v 1.7 2004/01/31 18:41:55 petdance Exp $
+# $Id: Cycle.pm,v 1.9 2004/09/03 00:52:46 comdog Exp $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.7 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.9 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -24,7 +24,7 @@ sub TIESCALAR
 sub FETCH
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0]++;
 	$$self[0] %= $self->[1];
 
@@ -41,18 +41,18 @@ sub STORE
 
 	$self = [ 0, scalar @$list_ref, $list_ref ];
 	}
-	
+
 sub reset
 	{
 	my $self = shift;
-	
+
 	$$self[0] = 0;
 	}
 
 sub previous
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0] - 1;
 	$$self[0] %= $self->[1];
 
@@ -62,7 +62,7 @@ sub previous
 sub next
 	{
 	my $self = shift;
-	
+
 	my $index = $$self[0] + 1;
 	$$self[0] %= $self->[1];
 
@@ -86,7 +86,7 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 	print $cycle; # FFFFFF
 	print $cycle; # 000000
 	print $cycle; # FFFF00
-	print $cycle; # FFFFFF  back to the beginning    
+	print $cycle; # FFFFFF  back to the beginning
 
 	(tied $cycle)->reset;  # back to the beginning
 
@@ -135,7 +135,7 @@ You can peek at the next element if you like.
 This source is part of a SourceForge project which always has the
 latest sources in CVS, as well as all of the previous releases.
 
-	https://sourceforge.net/projects/brian-d-foy/
+	http://sourceforge.net/projects/brian-d-foy/
 
 If, for some reason, I disappear from the world, one of the other
 members of the project can shepherd this module appropriately.
@@ -146,7 +146,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2004, brian d foy, All rights reserved.
+Copyright 2000-2004, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
