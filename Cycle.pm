@@ -1,9 +1,10 @@
+# $Id: Cycle.pm,v 1.5 2002/12/17 18:46:41 comdog Exp $
 package Tie::Cycle;
-
-require 5.6.0;
 use strict;
 
-our $VERSION = 0.05;
+use vars qw( $VERSION );
+
+$VERSION = sprintf "%d.%02d", q$Revision: 1.5 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -90,7 +91,7 @@ Tie::Cycle - Cycle through a list of values via a scalar.
 	print $cycle; # FFFFFF  back to the beginning    
 
 	(tied $cycle)->reset;  # back to the beginning
-	
+
 =head1 DESCRIPTION
 
 You use C<Tie::Cycle> to go through a list over and over again.
@@ -131,9 +132,19 @@ You can peek at the next element if you like.
 
 =back
 
+=head1 SOURCE AVAILABILITY
+
+This source is part of a SourceForge project which always has the
+latest sources in CVS, as well as all of the previous releases.
+
+	https://sourceforge.net/projects/brian-d-foy/
+
+If, for some reason, I disappear from the world, one of the other
+members of the project can shepherd this module appropriately.
+
 =head1 AUTHOR
 
-brian d foy <bdfoy@cpan.org>.
+brian d foy, E<lt>bdfoy@cpan.orgE<gt>
 
 =head1 COPYRIGHT and LICENSE
 

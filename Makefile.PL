@@ -1,8 +1,29 @@
+# $Id: Makefile.PL,v 1.4 2002/12/17 18:37:54 comdog Exp $
 use ExtUtils::MakeMaker;
-# See lib/ExtUtils/MakeMaker.pm for details of how to influence
-# the contents of the Makefile that is written.
+
+sub ExtUtils::MM_Any::test_via_harness
+		{
+		my($self, $perl, $tests) = @_;
+
+		return qq|\t$perl "-MTest::Manifest" | .
+			qq|"-e" "run_t_manifest(\$(TEST_VERBOSE), '\$(INST_LIB)', | .
+			qq|'\$(INST_ARCHLIB)')"\n|;
+		}
+
 WriteMakefile(
-    'NAME'		=> 'Tie::Cycle',
-    'VERSION_FROM'	=> 'Cycle.pm', # finds $VERSION
-    'PREREQ_PM'		=> {}, # e.g., Module::Name => 1.1
-);
+    'NAME'		    => 'Tie::Cycle',
+    'VERSION_FROM'	=> 'Cycle.pm',
+ 
+    'PREREQ_PM'		=> {
+		'File::Find::Rule' => '0',
+		'Test::Manifest'   => '0.91',
+		'Test::More'       => '0',
+		'Test::Pod'        => '0.90',
+    	},
+    
+    'MAN3PODS'      => {
+    	'Cycle.pm'  => '$(INST_MAN3DIR)/Tie::Cycle.3',
+    	},
+    	
+    'clean' => { FILES => 'Tie-Cycle-*' },
+	);
