@@ -1,10 +1,10 @@
-# $Id: Cycle.pm,v 1.9 2004/09/03 00:52:46 comdog Exp $
+# $Id: Cycle.pm,v 1.11 2005/01/04 00:47:00 comdog Exp $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.9 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.11 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -14,7 +14,7 @@ sub TIESCALAR
 	my @shallow_copy = map { $_ } @$list_ref;
 
 	return unless UNIVERSAL::isa( $list_ref, 'ARRAY' );
-	return unless @$list_ref > 1;
+	#return unless @$list_ref > 1;
 
 	my $self = [ 0, scalar @shallow_copy, \@shallow_copy ];
 
@@ -98,8 +98,11 @@ You don't have to worry about any of this since the magic of
 tie does that for you.
 
 The tie takes an array reference as its third argument.  The tie
-should succeed unless the argument is not an array reference or
-the referenced array contains fewer than two elements.
+should succeed unless the argument is not an array reference.
+Previous versions required you to use an array that had more
+than one element (what's the pointing of looping otherwise?),
+but I've removed that restriction since the number of elements
+you want to use may change depending on the situation.
 
 During the tie, this module makes a shallow copy of the array
 reference.  If the array reference contains references, and those
@@ -146,7 +149,7 @@ brian d foy, C<< <bdfoy@cpan.org> >>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000-2004, brian d foy, All rights reserved.
+Copyright 2000-2005, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 
