@@ -1,10 +1,10 @@
-# $Id: Cycle.pm,v 1.5 2002/12/17 18:46:41 comdog Exp $
+# $Id: Cycle.pm,v 1.6 2002/12/17 20:19:16 comdog Exp $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.5 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.6 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -72,8 +72,6 @@ sub next
 "Tie::Cycle";
 
 __END__
-
-=pod
 
 =head1 NAME
 
@@ -148,7 +146,7 @@ brian d foy, E<lt>bdfoy@cpan.orgE<gt>
 
 =head1 COPYRIGHT and LICENSE
 
-Copyright 2000 by brian d foy.
+Copyright 2000, brian d foy, All rights reserved.
 
 This software is available under the same terms as perl.
 

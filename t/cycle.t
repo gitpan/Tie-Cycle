@@ -1,13 +1,16 @@
-# $Id: cycle.t,v 1.1 2002/12/17 18:31:29 comdog Exp $
+# $Id: cycle.t,v 1.2 2002/12/17 20:19:16 comdog Exp $
 
-use Test::More tests => 6;
+use Test::More tests => 9;
 
-use Tie::Toggle;
+use Tie::Cycle;
 
-tie my $toggle, 'Tie::Toggle';
+my @array = qw( A B C );
+
+tie my $cycle, 'Tie::Cycle', \@array;
 
 foreach( 0 .. 2 )
 	{
-	is( $toggle, '', "Toggle is false, iteration $_" );
-	is( $toggle, 1, "Toggle is true, iteration $_" );
+	is( $cycle, $array[0], "Cycle is first element, iteration $_" );
+	is( $cycle, $array[1], "Cycle is second element, iteration $_" );
+	is( $cycle, $array[2], "Cycle is third element, iteration $_" );
 	}
