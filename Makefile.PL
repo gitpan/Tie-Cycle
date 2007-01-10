@@ -1,4 +1,4 @@
-# $Id: Makefile.PL,v 1.8 2006/05/18 00:38:56 comdog Exp $
+# $Id: Makefile.PL,v 1.9 2007/01/10 04:56:48 comdog Exp $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest 1.14";
@@ -6,6 +6,7 @@ eval "use Test::Manifest 1.14";
 WriteMakefile(
 	'NAME'          => 'Tie::Cycle',
 	'VERSION_FROM'  => 'Cycle.pm',
+	'LICENSE'       => 'perl',
  
 	'PREREQ_PM'		=> {
 		'Test::More'       => '0',

@@ -1,10 +1,10 @@
-# $Id: Cycle.pm,v 1.13 2006/05/18 00:38:56 comdog Exp $
+# $Id: Cycle.pm,v 1.14 2007/01/10 04:56:48 comdog Exp $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.13 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = sprintf "%d.%02d", q$Revision: 1.14 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{
@@ -145,11 +145,9 @@ members of the project can shepherd this module appropriately.
 
 brian d foy, C<< <bdfoy@cpan.org> >>
 
-=head1 COPYRIGHT and LICENSE
+=head1 COPYRIGHT AND LICENSE
 
-Copyright 2000-2006, brian d foy, All rights reserved.
+Copyright 2000-2007, brian d foy, All rights reserved
 
 This software is available under the same terms as perl.
-
-=cut
 
