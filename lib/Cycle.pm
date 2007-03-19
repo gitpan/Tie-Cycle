@@ -1,10 +1,11 @@
-# $Id: Cycle.pm,v 1.14 2007/01/10 04:56:48 comdog Exp $
+# $Id: Cycle.pm 2233 2007-03-19 06:06:38Z comdog $
 package Tie::Cycle;
 use strict;
 
 use vars qw( $VERSION );
 
-$VERSION = sprintf "%d.%02d", q$Revision: 1.14 $ =~ m/ (\d+) \. (\d+) /xg;
+$VERSION = 1.15;
+#sprintf "%d.%02d", q$Revision: 2233 $ =~ m/ (\d+) \. (\d+) /xg;
 
 sub TIESCALAR
 	{

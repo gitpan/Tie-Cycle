@@ -1,4 +1,4 @@
-# $Id: cycle.t,v 1.2 2002/12/17 20:19:16 comdog Exp $
+# $Id: cycle.t 767 2002-12-17 20:19:16Z comdog $
 
 use Test::More tests => 9;
 
