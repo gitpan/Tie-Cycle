@@ -1,10 +1,11 @@
-# $Id: Makefile.PL 2233 2007-03-19 06:06:38Z comdog $
+# $Id: Makefile.PL 2338 2007-10-28 01:41:27Z comdog $
 use ExtUtils::MakeMaker;
 
 eval "use Test::Manifest 1.14";
 
 WriteMakefile(
 	'NAME'          => 'Tie::Cycle',
+	'ABSTRACT'      => 'Cycle through a list of values via a scalar',
 	'VERSION_FROM'  => 'lib/Cycle.pm',
 	'LICENSE'       => 'perl',
 	'AUTHOR'        => 'brian d foy <bdfoy@cpan.org>',
