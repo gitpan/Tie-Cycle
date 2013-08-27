@@ -1,9 +1,11 @@
 Changes
-lib/Cycle.pm
 examples/README
+lib/Tie/Cycle.pm
 LICENSE
 Makefile.PL
 MANIFEST
+MYMETA.json
+MYMETA.yml
 README
 t/cycle.t
 t/load.t
@@ -11,4 +13,5 @@ t/one.t
 t/pod.t
 t/pod_coverage.t
 t/test_manifest
-META.yml                                 Module meta-data (added by MakeMaker)
+META.yml                                 Module YAML meta-data (added by MakeMaker)
+META.json                                Module JSON meta-data (added by MakeMaker)
