@@ -19,12 +19,12 @@
          "inc"
       ]
    },
-   "release_status" : "stable",
+   "release_status" : "testing",
    "resources" : {
       "repository" : {
          "type" : "git",
          "web" : "https://github.com/briandfoy/tie-cycle"
       }
    },
-   "version" : "1.19"
+   "version" : "1.19_01"
 }

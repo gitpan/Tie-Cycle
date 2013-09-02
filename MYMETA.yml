@@ -16,4 +16,4 @@ no_index:
     - inc
 resources:
   repository: https://github.com/briandfoy/tie-cycle
-version: 1.19
+version: 1.19_01
