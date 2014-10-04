@@ -4,7 +4,7 @@
       "brian d foy <bdfoy@cpan.org>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "ExtUtils::MakeMaker version 6.66, CPAN::Meta::Converter version 2.132830",
+   "generated_by" : "ExtUtils::MakeMaker version 6.86, CPAN::Meta::Converter version 2.120921",
    "license" : [
       "perl_5"
    ],
@@ -19,6 +19,28 @@
          "inc"
       ]
    },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "0"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "ExtUtils::MakeMaker" : "6.64"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Carp" : "0"
+         }
+      },
+      "test" : {
+         "requires" : {
+            "Test::More" : "0.95"
+         }
+      }
+   },
    "release_status" : "stable",
    "resources" : {
       "repository" : {
@@ -26,5 +48,5 @@
          "web" : "https://github.com/briandfoy/tie-cycle"
       }
    },
-   "version" : "1.20"
+   "version" : "1.21"
 }
